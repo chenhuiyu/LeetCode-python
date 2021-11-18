@@ -8,7 +8,6 @@
 # @lc code=start
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        if nums is None: return None
         left = 0
         right = len(nums) - 1
         while left <= right:
