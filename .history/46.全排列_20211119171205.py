@@ -1,0 +1,21 @@
+#
+# @lc app=leetcode.cn id=46 lang=python3
+#
+# [46] 全排列
+#
+
+
+# @lc code=start
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def loop(nums, index, path, ans):
+            # 递归终点，收集答案
+            if index == len(nums) - 1:
+                ans.append(path)
+            # i位置和i位置之后的每个数逐个交换
+            for j in range(len(nums)):
+                nums[index], [j] = nums[j], nums[index]
+                loop(nums, index + 1, ans)
+
+
+# @lc code=end

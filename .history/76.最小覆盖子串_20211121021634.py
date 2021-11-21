@@ -1,0 +1,15 @@
+#
+# @lc app=leetcode.cn id=76 lang=python3
+#
+# [76] 最小覆盖子串
+#
+
+
+# @lc code=start
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        # 建立一个26*2的英文字母对应表，表示每个字母的欠债情况
+        debit = [0 for i in inrange(26 * 2)]
+
+
+# @lc code=end
